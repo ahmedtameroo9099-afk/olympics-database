@@ -1,0 +1,561 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="UML mapping" id="olympics-uml">
+    <mxGraphModel dx="4080" dy="2508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="country" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="country&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="230" x="1040" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="country.country_id" parent="country" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; country_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="country.country_name" parent="country" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="country_name : VARCHAR(100) {unique}" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="sport" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="sport&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="230" x="2390" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="sport.sport_id" parent="sport" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; sport_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="sport.sport_name" parent="sport" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="sport_name : VARCHAR(100) {unique}" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="games" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="games&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="128" width="230" x="530" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="games.games_id" parent="games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; games_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="games.game_year" parent="games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="game_year : SMALLINT" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="games.season" parent="games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="season : VARCHAR(10)" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="games.host_city" parent="games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="host_city : VARCHAR(100)" vertex="1">
+          <mxGeometry height="20" width="230" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="games.host_country_id" parent="games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; host_country_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="athlete&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="230" x="450" y="2390" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete.athlete_id" parent="athlete" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; athlete_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete.athlete_name" parent="athlete" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="athlete_name : VARCHAR(100)" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete.date_of_birth" parent="athlete" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="date_of_birth : DATE" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_games" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#0B4D6A;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#EAF2F6;" value="athlete_games&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«association table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="230" x="720" y="1870" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_games.athlete_id" parent="athlete_games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; athlete_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_games.games_id" parent="athlete_games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; games_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_games.country_id" parent="athlete_games" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; country_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="coach" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="coach&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="230" x="1040" y="2390" as="geometry" />
+        </mxCell>
+        <mxCell id="coach.coach_id" parent="coach" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; coach_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="coach.coach_name" parent="coach" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="coach_name : VARCHAR(100)" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="coach.country_id" parent="coach" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; country_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_coach" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#0B4D6A;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#EAF2F6;" value="athlete_coach&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«association table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="230" x="300" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_coach.athlete_id" parent="athlete_coach" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; athlete_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="athlete_coach.coach_id" parent="athlete_coach" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; coach_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="referee" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="referee&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="128" width="230" x="2241" y="2350" as="geometry" />
+        </mxCell>
+        <mxCell id="referee.referee_id" parent="referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; referee_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="referee.referee_name" parent="referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="referee_name : VARCHAR(100)" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="referee.date_of_birth" parent="referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="date_of_birth : DATE" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="referee.sport_id" parent="referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; sport_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="referee.country_id" parent="referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; country_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="event" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="event&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="148" width="230" x="1660" y="1410" as="geometry" />
+        </mxCell>
+        <mxCell id="event.event_id" parent="event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; event_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="event.games_id" parent="event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; games_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="event.sport_id" parent="event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; sport_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="event.event_name" parent="event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="event_name : VARCHAR(150)" vertex="1">
+          <mxGeometry height="20" width="230" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="event.gender_category" parent="event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="gender_category : VARCHAR(30)" vertex="1">
+          <mxGeometry height="20" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="event.event_date" parent="event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="event_date : DATE" vertex="1">
+          <mxGeometry height="20" width="230" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="result" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="result&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="148" width="230" x="2720" y="1410" as="geometry" />
+        </mxCell>
+        <mxCell id="result.event_id" parent="result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; event_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="result.athlete_id" parent="result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; athlete_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="result.games_id" parent="result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; games_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="result.score" parent="result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="score : DECIMAL(12,3)" vertex="1">
+          <mxGeometry height="20" width="230" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="result.rank_position" parent="result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="rank_position : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="result.medal" parent="result" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="medal : VARCHAR(10)" vertex="1">
+          <mxGeometry height="20" width="230" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="event_referee" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#0B4D6A;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#EAF2F6;" value="event_referee&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«association table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="230" x="1920" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="event_referee.event_id" parent="event_referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; event_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="event_referee.referee_id" parent="event_referee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; referee_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="sponsor" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="sponsor&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="230" x="2870" y="2384" as="geometry" />
+        </mxCell>
+        <mxCell id="sponsor.sponsor_id" parent="sponsor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; sponsor_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="sponsor.company_name" parent="sponsor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="company_name : VARCHAR(100)" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="sponsor.home_country_id" parent="sponsor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; home_country_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="event_sponsor" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#0B4D6A;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#EAF2F6;" value="event_sponsor&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«association table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="230" x="2870" y="1870" as="geometry" />
+        </mxCell>
+        <mxCell id="event_sponsor.event_id" parent="event_sponsor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; event_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="event_sponsor.sponsor_id" parent="event_sponsor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; sponsor_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="event_sponsor.amount" parent="event_sponsor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="amount : DECIMAL(12,2)" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="organizer" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="organizer&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="230" x="1550" y="2390" as="geometry" />
+        </mxCell>
+        <mxCell id="organizer.organizer_id" parent="organizer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; organizer_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="organizer.organizer_name" parent="organizer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="organizer_name : VARCHAR(100)" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="organizer.organizer_email" parent="organizer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="organizer_email : VARCHAR(150)" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="event_organizer" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#0B4D6A;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#EAF2F6;" value="event_organizer&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«association table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="230" x="1550" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="event_organizer.event_id" parent="event_organizer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; event_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="event_organizer.organizer_id" parent="event_organizer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK, FK»&lt;/b&gt; organizer_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;html=1;startSize=34;horizontal=1;collapsible=0;marginBottom=0;fillColor=#09555B;fontColor=#FFFFFF;strokeColor=#0B4D6A;swimlaneFillColor=#F4FAFA;" value="ticket&lt;br&gt;&lt;font style=&quot;font-size:9px;font-weight:normal&quot;&gt;«table»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="128" width="230" x="2000" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket.ticket_id" parent="ticket" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;u&gt;&lt;b&gt;«PK»&lt;/b&gt; ticket_id : INT&lt;/u&gt;" vertex="1">
+          <mxGeometry height="20" width="230" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket.event_id" parent="ticket" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="&lt;b&gt;«FK»&lt;/b&gt; event_id : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket.ticket_category" parent="ticket" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="ticket_category : VARCHAR(50)" vertex="1">
+          <mxGeometry height="20" width="230" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket.price" parent="ticket" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="price : DECIMAL(10,2)" vertex="1">
+          <mxGeometry height="20" width="230" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="ticket.quantity" parent="ticket" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;fontColor=#1A1A1A;whiteSpace=nowrap;" value="quantity : INT" vertex="1">
+          <mxGeometry height="20" width="230" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-0" edge="1" parent="1" source="country" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="games" value="host_country_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-0-p" connectable="0" parent="assoc-0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-0-c" connectable="0" parent="assoc-0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-1" edge="1" parent="1" source="country" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="coach" value="country_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-1-p" connectable="0" parent="assoc-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-1-c" connectable="0" parent="assoc-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-2" edge="1" parent="1" source="country" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="referee" value="country_id">
+          <mxGeometry relative="1" x="0.066" as="geometry">
+            <Array as="points">
+              <mxPoint x="1240" y="740" />
+              <mxPoint x="2356" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-2-p" connectable="0" parent="assoc-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8799" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-2-c" connectable="0" parent="assoc-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.832" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-3" edge="1" parent="1" source="country" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="sponsor" value="home_country_id">
+          <mxGeometry relative="1" x="-0.005" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="834" />
+              <mxPoint x="1510" y="2280" />
+              <mxPoint x="2930" y="2280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-3-p" connectable="0" parent="assoc-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-0.8212" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-3-c" connectable="0" parent="assoc-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8511" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-4" edge="1" parent="1" source="country" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="athlete_games" value="country_id">
+          <mxGeometry relative="1" x="0.0439" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="930" />
+              <mxPoint x="835" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-4-p" connectable="0" parent="assoc-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8551" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-4-c" connectable="0" parent="assoc-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8273" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-5" edge="1" parent="1" source="sport" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="referee" value="sport_id">
+          <mxGeometry relative="1" x="0.0704" as="geometry">
+            <Array as="points">
+              <mxPoint x="2505" y="2154" />
+              <mxPoint x="2400" y="2154" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-5-p" connectable="0" parent="assoc-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8028" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-5-c" connectable="0" parent="assoc-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-6" edge="1" parent="1" source="sport" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event" value="sport_id">
+          <mxGeometry relative="1" x="0.0341" as="geometry">
+            <Array as="points">
+              <mxPoint x="2505" y="1810" />
+              <mxPoint x="1810" y="1810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-6-p" connectable="0" parent="assoc-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.813" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-6-c" connectable="0" parent="assoc-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8343" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-7" edge="1" parent="1" source="games" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event" value="games_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-7-p" connectable="0" parent="assoc-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-7-c" connectable="0" parent="assoc-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-8" edge="1" parent="1" source="games" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="athlete_games" value="games_id">
+          <mxGeometry relative="1" x="0.116" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="1714" />
+              <mxPoint x="790" y="1714" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-8-p" connectable="0" parent="assoc-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8031" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-8-c" connectable="0" parent="assoc-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-9" edge="1" parent="1" source="athlete" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="athlete_games" value="athlete_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-9-p" connectable="0" parent="assoc-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-9-c" connectable="0" parent="assoc-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-10" edge="1" parent="1" source="athlete" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="athlete_coach" value="athlete_id">
+          <mxGeometry relative="1" x="0.0875" as="geometry">
+            <Array as="points">
+              <mxPoint x="565" y="2174" />
+              <mxPoint x="460" y="2174" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-10-p" connectable="0" parent="assoc-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8063" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-10-c" connectable="0" parent="assoc-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-11" edge="1" parent="1" source="coach" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="athlete_coach" value="coach_id">
+          <mxGeometry relative="1" x="-0.0861" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="2220" />
+              <mxPoint x="370" y="2220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-11-p" connectable="0" parent="assoc-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8262" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-11-c" connectable="0" parent="assoc-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8227" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-12" edge="1" parent="1" source="event" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="result" value="(event_id, games_id)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-12-p" connectable="0" parent="assoc-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-12-c" connectable="0" parent="assoc-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-13" edge="1" parent="1" source="athlete_games" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="result" value="(athlete_id, games_id)">
+          <mxGeometry relative="1" x="-0.0244" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="1710" />
+              <mxPoint x="2835" y="1710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-13-p" connectable="0" parent="assoc-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8042" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-13-c" connectable="0" parent="assoc-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8157" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-14" edge="1" parent="1" source="event" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event_referee" value="event_id">
+          <mxGeometry relative="1" x="-0.0476" as="geometry">
+            <Array as="points">
+              <mxPoint x="2035" y="1510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-14-p" connectable="0" parent="assoc-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-14-c" connectable="0" parent="assoc-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8095" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-15" edge="1" parent="1" source="referee" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event_referee" value="referee_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-15-p" connectable="0" parent="assoc-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-15-c" connectable="0" parent="assoc-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-16" edge="1" parent="1" source="event" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event_sponsor" value="event_id">
+          <mxGeometry relative="1" x="-0.0538" as="geometry">
+            <Array as="points">
+              <mxPoint x="1850" y="1370" />
+              <mxPoint x="3020" y="1370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-16-p" connectable="0" parent="assoc-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9018" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-16-c" connectable="0" parent="assoc-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8433" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-17" edge="1" parent="1" source="sponsor" style="edgeStyle=none;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event_sponsor" value="sponsor_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-17-p" connectable="0" parent="assoc-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-17-c" connectable="0" parent="assoc-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-18" edge="1" parent="1" source="event" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event_organizer" value="event_id">
+          <mxGeometry relative="1" x="0.0225" as="geometry">
+            <Array as="points">
+              <mxPoint x="1750" y="1770" />
+              <mxPoint x="1665" y="1770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-18-p" connectable="0" parent="assoc-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.819" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-18-c" connectable="0" parent="assoc-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8082" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-19" edge="1" parent="1" source="organizer" style="html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="event_organizer" value="organizer_id">
+          <mxGeometry relative="1" x="0.1237" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-19-p" connectable="0" parent="assoc-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8143" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-19-c" connectable="0" parent="assoc-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8424" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-20" edge="1" parent="1" source="event" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=none;strokeColor=#0B4D6A;fontSize=9;fontColor=#0B4D6A;labelBackgroundColor=#FFFFFF;" target="ticket" value="event_id">
+          <mxGeometry relative="1" x="-0.0572" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="1100" />
+              <mxPoint x="2115" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-20-p" connectable="0" parent="assoc-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.82" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-20-c" connectable="0" parent="assoc-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#09555B;labelBackgroundColor=#FFFFFF;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8196" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
